@@ -1,5 +1,5 @@
 function Home() {
-  return <h1>boa noite minha bentivi</h1>;
+  return <h1>boa viagem minha bentivi</h1>;
 }
 
 export default Home;
