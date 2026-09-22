@@ -1,0 +1,474 @@
+:root {
+  --text: #252525;
+  --secondary: #5b5b5b;
+  --line: #deded9;
+  --link: #214d87;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 35px;
+}
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.page {
+  width: min(1080px, calc(100% - 96px));
+  margin: 0 auto;
+}
+a {
+  color: var(--link);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 5px;
+}
+p {
+  margin: 0;
+}
+p + p {
+  margin-top: 18px;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+h1,
+h2,
+.project h3,
+.adoption-note h3 {
+  font-family: var(--serif);
+}
+h1 {
+  font-size: clamp(3.7rem, 6.1vw, 5.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 0 29px;
+  border-bottom: 1px solid var(--line);
+  gap: 24px;
+}
+.header .name {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.header nav {
+  display: flex;
+  gap: 30px;
+  font-size: 0.9375rem;
+}
+.header nav a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+.header nav a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 730px) minmax(160px, 1fr);
+  gap: 90px;
+  padding: 72px 0 76px;
+}
+.intro-main h1 {
+  margin-bottom: 31px;
+}
+.intro-main .lead {
+  font-size: 1.35rem;
+  line-height: 1.55;
+  max-width: 650px;
+  margin-bottom: 22px;
+}
+.intro-main > p:not(.lead) {
+  max-width: 660px;
+  color: #404040;
+}
+.intro-links {
+  display: flex;
+  gap: 27px;
+  margin-top: 27px;
+  font-size: 1rem;
+}
+.intro-aside {
+  padding-top: 17px;
+}
+.aside-block + .aside-block {
+  margin-top: 28px;
+}
+.aside-block > span {
+  font-size: 0.875rem;
+  color: #737373;
+  display: block;
+  margin-bottom: 7px;
+}
+.aside-block > p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.section-heading {
+  border-top: 1px solid var(--text);
+  padding-top: 29px;
+  margin-bottom: 14px;
+}
+.section-heading > p {
+  font-size: 0.9375rem;
+  color: var(--secondary);
+  margin-top: 9px;
+}
+.project {
+  display: grid;
+  grid-template-columns: 36% minmax(0, 1fr);
+  gap: 46px;
+  padding: 38px 0;
+  border-bottom: 1px solid var(--line);
+}
+.project-context {
+  color: var(--secondary);
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+.project h3 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.project-copy {
+  font-size: 1.0625rem;
+}
+.project-copy > p {
+  color: #404040;
+}
+.project-copy .project-detail {
+  font-size: 0.9375rem;
+  color: var(--secondary);
+  margin-top: 20px;
+}
+.project-detail strong {
+  font-weight: 400;
+  color: var(--text);
+}
+.adoption-note {
+  display: grid;
+  grid-template-columns: 36% minmax(0, 1fr);
+  gap: 46px;
+  padding: 34px 0 51px;
+}
+.adoption-note h3 {
+  font-size: 1.55rem;
+  line-height: 1.3;
+  max-width: 270px;
+}
+.adoption-note p {
+  font-size: 1rem;
+  color: #404040;
+}
+.trajectory {
+  border-top: 1px solid var(--text);
+  display: grid;
+  grid-template-columns: 25% minmax(0, 1fr);
+  gap: 40px;
+  padding-top: 32px;
+  padding-bottom: 52px;
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 28px;
+  padding-bottom: 28px;
+}
+.timeline-date {
+  font-size: 0.875rem;
+  color: var(--secondary);
+  padding-top: 2px;
+}
+.timeline-item h3 {
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+.timeline-item p {
+  color: var(--secondary);
+  font-size: 1rem;
+  margin-top: 7px;
+}
+.education {
+  padding-top: 4px;
+  margin-left: 128px;
+}
+.education h3 {
+  font-size: 1.0625rem;
+  margin-bottom: 11px;
+}
+.education p {
+  font-size: 1rem;
+  color: var(--secondary);
+}
+.contact {
+  border-top: 1px solid var(--text);
+  display: grid;
+  grid-template-columns: 25% minmax(0, 1fr);
+  gap: 40px;
+  padding: 32px 0 55px;
+}
+.contact p {
+  font-size: 1rem;
+  color: var(--secondary);
+}
+.email {
+  display: inline-block;
+  font-size: 1.35rem;
+  margin-top: 12px;
+}
+.contact-links {
+  display: flex;
+  gap: 26px;
+  margin-top: 20px;
+  font-size: 0.9375rem;
+}
+footer {
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0 34px;
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+footer a {
+  color: var(--secondary);
+}
+.skip {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: #fff;
+  padding: 10px 15px;
+  z-index: 10;
+  transform: translateY(-160%);
+}
+.skip:focus {
+  transform: translateY(0);
+}
+@media (max-width: 900px) {
+  .page {
+    width: calc(100% - 64px);
+  }
+  .intro {
+    gap: 45px;
+    grid-template-columns: minmax(0, 1fr) 160px;
+  }
+  .intro-main .lead {
+    font-size: 1.2rem;
+  }
+  .project,
+  .adoption-note {
+    grid-template-columns: 33% minmax(0, 1fr);
+    gap: 32px;
+  }
+  .project h3 {
+    font-size: 1.65rem;
+  }
+  .desktop-break {
+    display: none;
+  }
+  .trajectory,
+  .contact {
+    grid-template-columns: 23% minmax(0, 1fr);
+    gap: 28px;
+  }
+  .timeline-item {
+    grid-template-columns: 80px 1fr;
+    gap: 22px;
+  }
+  .education {
+    margin-left: 102px;
+  }
+}
+@media (max-width: 620px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .page {
+    width: calc(100% - 40px);
+  }
+  .header {
+    padding: 24px 0 20px;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .header .name {
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+  .header nav {
+    font-size: 0.875rem;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    line-height: 1.9;
+  }
+  .header nav a:nth-child(2) {
+    display: none;
+  }
+  .intro {
+    display: block;
+    padding: 43px 0 40px;
+  }
+  .intro-main h1 {
+    font-size: clamp(2.9rem, 12vw, 4rem);
+    margin-bottom: 25px;
+  }
+  .intro-main .lead {
+    font-size: 1.2rem;
+    line-height: 1.55;
+  }
+  .intro-main > p:not(.lead) {
+    font-size: 1rem;
+  }
+  .intro-aside {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 33px;
+    border-top: 1px solid var(--line);
+    padding-top: 23px;
+    margin-top: 32px;
+  }
+  .aside-block + .aside-block {
+    margin-top: 0;
+  }
+  .aside-block > span {
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+  }
+  .aside-block > p {
+    font-size: 0.875rem;
+  }
+  .aside-block:last-child {
+    display: none;
+  }
+  .intro-links {
+    font-size: 0.9375rem;
+    gap: 23px;
+    margin-top: 24px;
+  }
+  .section-heading {
+    padding-top: 26px;
+    margin-bottom: 0;
+  }
+  .section-heading h2 {
+    font-size: 1.85rem;
+  }
+  .section-heading p {
+    font-size: 0.875rem;
+  }
+  .project {
+    display: block;
+    padding: 29px 0;
+  }
+  .project-context {
+    margin-bottom: 9px;
+  }
+  .project h3 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+  .project-copy {
+    margin-top: 21px;
+    font-size: 1rem;
+  }
+  .project-copy .project-detail {
+    font-size: 0.9375rem;
+  }
+  .adoption-note {
+    display: block;
+    padding: 29px 0 38px;
+  }
+  .adoption-note h3 {
+    font-size: 1.5rem;
+    max-width: 310px;
+    margin-bottom: 17px;
+  }
+  .adoption-note p {
+    font-size: 1rem;
+  }
+  .trajectory {
+    display: block;
+    padding-top: 26px;
+    padding-bottom: 37px;
+  }
+  .trajectory h2 {
+    font-size: 1.85rem;
+    margin-bottom: 28px;
+  }
+  .timeline-item {
+    grid-template-columns: 72px 1fr;
+    gap: 16px;
+    padding-bottom: 25px;
+  }
+  .timeline-date {
+    font-size: 0.875rem;
+  }
+  .timeline-item p {
+    font-size: 0.9375rem;
+  }
+  .education {
+    margin-left: 0;
+    padding-top: 7px;
+  }
+  .education p {
+    font-size: 0.9375rem;
+  }
+  .contact {
+    display: block;
+    padding: 26px 0 37px;
+  }
+  .contact h2 {
+    font-size: 1.85rem;
+    margin-bottom: 22px;
+  }
+  .email {
+    font-size: 1.125rem;
+    overflow-wrap: anywhere;
+  }
+  .contact-links {
+    font-size: 0.9375rem;
+  }
+  footer {
+    font-size: 0.8125rem;
+    padding-bottom: 26px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
